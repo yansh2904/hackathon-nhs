@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NHS Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* Light blue background */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff; /* White card background */
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .header img {
+            width: 50px; /* Set the logo size */
+            height: 50px; /* Maintain aspect ratio */
+            margin-right: 10px; /* Add space between logo and text */
+            margin-left: -10px; /* Shift the logo slightly to the left */
+        }
+
+        h1 {
+            color: #0074d9; /* Deep blue text */
+            margin: 0;
+            font-size: 24px;
+        }
+
+        label {
+            color: #333333; /* Darker text for readability */
+            font-weight: bold;
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #0074d9; /* Blue border */
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #0074d9; /* Blue button */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #005bb5; /* Darker blue on hover */
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #555555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="static/nhs-vector-logo-400x400.png" alt="NHS Logo">
+            <h1>NHS Search</h1>
+        </div>
+        <form method="POST" action="/">
+            <label for="question">Question:</label>
+            <input type="text" id="question" name="question" placeholder="Enter your question" required>
+
+            <label for="persona">Persona:</label>
+            <input type="text" id="persona" name="persona" placeholder="Enter persona (e.g., Doctor)" required>
+
+            <button type="submit">Submit</button>
+        </form>
+        <footer>
+            Powered by NHS Search API
+        </footer>
+    </div>
+</body>
+</html>

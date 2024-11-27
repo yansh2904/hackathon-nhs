@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NHS Search Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* Light blue background */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff; /* White card background */
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #0074d9; /* Deep blue text */
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #333333; /* Darker text for readability */
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #555555; /* Subtle text color */
+            font-size: 16px;
+            margin: 15px 0;
+        }
+
+        a {
+            display: inline-block;
+            background-color: #0074d9; /* Blue button style */
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        a:hover {
+            background-color: #005bb5; /* Darker blue on hover */
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #555555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Search Results</h1>
+        <h2><strong>Question:</strong> {{ question }}</h2>
+        <h2><strong>Persona:</strong> {{ persona }}</h2>
+
+        <h2>Answer:</h2>
+        <!-- Render the main output from the API -->
+        <p>{{ response.get("chat_output", "No response available") }}</p>
+
+        <a href="/">Go Back</a>
+        <footer>
+            Powered by NHS Search API
+        </footer>
+    </div>
+</body>
+</html>
